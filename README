@@ -1,0 +1,4 @@
+let bundle = Bundle(for: PopUpViewControllerSwift.self)
+        self.popViewController = PopUpViewControllerSwift(nibName: "PopUpViewController", bundle: bundle)
+        self.popViewController.title = "This is a popup view"
+        self.popViewController.showInView(self.view, withImage: UIImage(named: "paysuccess"), withMessage: "An alertView is shown now in the center your screen!", animated: true,viewMode: HTAlertViewMode.HTAlertImageMode,subTitle:"开启成功")
