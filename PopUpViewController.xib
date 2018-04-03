@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpViewControllerSwift">
+            <connections>
+                <outlet property="closeButton" destination="moA-sG-w9U" id="5aQ-BE-qRn"/>
+                <outlet property="logoImg" destination="ddu-ny-h6P" id="6vY-Y3-2fw"/>
+                <outlet property="messageLabel" destination="d9y-sm-xub" id="Y3U-RS-wXc"/>
+                <outlet property="popUpView" destination="FvE-39-pUU" id="drV-PD-bNg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="WrW-nh-j87"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvE-39-pUU">
+                    <rect key="frame" x="58" y="183" width="258" height="162"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lockIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ddu-ny-h6P">
+                            <rect key="frame" x="64" y="8" width="132" height="93"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moA-sG-w9U">
+                            <rect key="frame" x="68" y="113" width="123" height="30"/>
+                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="aHx-2t-gNe"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closePopup:" destination="-1" eventType="touchUpInside" id="h7o-1k-CN6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="该设备没有添加应用" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" adjustsFontForContentSizeCategory="YES" preferredMaxLayoutWidth="243" translatesAutoresizingMaskIntoConstraints="NO" id="d9y-sm-xub">
+                            <rect key="frame" x="40" y="18" width="178" height="73"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="d9y-sm-xub" secondAttribute="height" multiplier="73:30" id="5TT-ig-5i8"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NP8-S5-Mko">
+                            <rect key="frame" x="225" y="8" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="kAt-o3-hot"/>
+                            </constraints>
+                            <state key="normal" backgroundImage="ht_crossclose.png">
+                                <color key="titleColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closePopup:" destination="-1" eventType="touchUpInside" id="6Hf-Cg-JOS"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="moA-sG-w9U" firstAttribute="centerX" secondItem="d9y-sm-xub" secondAttribute="centerX" constant="0.5" id="8H5-Js-xZd"/>
+                        <constraint firstItem="NP8-S5-Mko" firstAttribute="leading" secondItem="d9y-sm-xub" secondAttribute="trailing" constant="7" id="9KU-g8-wut"/>
+                        <constraint firstAttribute="bottom" secondItem="moA-sG-w9U" secondAttribute="bottom" constant="19" id="Cub-7W-m5c"/>
+                        <constraint firstItem="d9y-sm-xub" firstAttribute="centerX" secondItem="ddu-ny-h6P" secondAttribute="centerX" constant="-1" id="EPc-rg-cpz"/>
+                        <constraint firstItem="d9y-sm-xub" firstAttribute="top" secondItem="FvE-39-pUU" secondAttribute="top" constant="18" id="FuY-7O-N7f"/>
+                        <constraint firstAttribute="width" secondItem="FvE-39-pUU" secondAttribute="height" multiplier="113:71" id="Mhy-ix-r8a"/>
+                        <constraint firstItem="NP8-S5-Mko" firstAttribute="trailing" secondItem="FvE-39-pUU" secondAttribute="trailingMargin" constant="-5" id="TA0-Q0-nsv"/>
+                        <constraint firstItem="moA-sG-w9U" firstAttribute="leading" secondItem="FvE-39-pUU" secondAttribute="leading" constant="68" id="Ve1-OS-7O4"/>
+                        <constraint firstItem="d9y-sm-xub" firstAttribute="top" secondItem="ddu-ny-h6P" secondAttribute="bottom" constant="-83" id="ZqL-7R-Yth"/>
+                        <constraint firstItem="d9y-sm-xub" firstAttribute="top" secondItem="FvE-39-pUU" secondAttribute="top" constant="18" id="aBc-ur-ixh"/>
+                        <constraint firstAttribute="trailing" secondItem="d9y-sm-xub" secondAttribute="trailing" constant="40" id="b1u-Sc-WuB"/>
+                        <constraint firstItem="NP8-S5-Mko" firstAttribute="top" secondItem="ddu-ny-h6P" secondAttribute="top" id="d3n-Ep-k1F"/>
+                        <constraint firstItem="d9y-sm-xub" firstAttribute="leading" secondItem="FvE-39-pUU" secondAttribute="leading" constant="40" id="frS-vD-2jz"/>
+                        <constraint firstItem="d9y-sm-xub" firstAttribute="top" secondItem="FvE-39-pUU" secondAttribute="top" constant="18" id="qyU-oE-E3Z"/>
+                        <constraint firstItem="ddu-ny-h6P" firstAttribute="leading" secondItem="FvE-39-pUU" secondAttribute="leading" constant="64" id="rkT-M8-hOC"/>
+                        <constraint firstItem="ddu-ny-h6P" firstAttribute="top" secondItem="FvE-39-pUU" secondAttribute="top" constant="8" id="th5-OE-zhL"/>
+                        <constraint firstItem="moA-sG-w9U" firstAttribute="top" secondItem="d9y-sm-xub" secondAttribute="bottom" constant="22" id="uHC-1P-FNX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="FvE-39-pUU" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iAt-ut-mGr"/>
+                <constraint firstItem="FvE-39-pUU" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="183" id="xRl-Al-rbF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="42.5" y="79.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ht_crossclose.png" width="16" height="16"/>
+        <image name="lockIcon.png" width="429" height="336"/>
+    </resources>
+</document>
